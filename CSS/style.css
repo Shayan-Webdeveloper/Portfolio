@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700,800,900display=swap');
+/* CSS Reset */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     border: none;
+     outline: none;
+     font-family: 'Poppins', sans-serif;
+     text-decoration: none;
+}
+/* html,body reset */
+html,body{
+     width: 100%;
+     height: 100vh;
+}
+
+/* Root Properties */
+:root{
+     --bg-color: #081b29;
+     --primary-color: #00abf0;
+     --primary-text-color: #333;
+     --secondary-text-color: #555;
+     --white-color: #fff;
+     --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
+     --pages-color: linear-gradient(90deg, #fff, #ddd);
+     --border: .13rem solid #00abf0;
+     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
+}
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-color: var(--bg-color);
+     color: var(--primary-text-color);
+}
+/* a{
+     text-decoration: none;
+     color: black;
+} */
+/* Book */
+.wrapper{
+     position: relative;
+     width: 80%;
+     height: 90%;
+     padding: 2rem;
+}
+/* Book Pages */
+.cover{
+     position: absolute;
+     width: 50%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: var(--cover-color);
+     box-shadow: var(--box-shadow);
+     border-top-left-radius: .7rem;
+     border-bottom-left-radius: .7rem;
+     transform-origin: right;
+}
+.cover-left{
+     z-index: -1;
+}
+.cover-right{
+     transform: rotateY(180deg);
+}
+.book{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     display: flex;
+}
+.book-page{
+     position: absolute;
+     width: 50%;
+     height: 100%;
+     background: var(--pages-color);
+     box-shadow: var(--box-shadow);
+     display: flex;
+     padding: 2rem;
+}
+
+.profile-page{
+     display: flex;
+     flex-direction: column;
+     justify-content: center; 
+     align-items: center;
+     text-align: center;
+}
+.profile-page p{
+     text-align: justify;
+}
+.profile-page img{
+     max-width: 100%;
+     height: auto;
+     border-radius: 50%;
+     margin-bottom: 1rem;
+     border: .3rem solid var(--primary-color);
+     margin-bottom: .9rem;
+}
+.profile-page h1{
+     font-size: 2.8rem;
+     line-height: 1;
+}
+.profile-page h3{
+     font-size: 1.3rem;
+     color: var(--primary-color);
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+}
+.social-media-cards a{
+     display: inline-flex;
+     width: 2.5rem;
+     height: 2.5rem;
+     background: transparent;
+     border: var(--border);
+     border-radius: 50%;
+     text-decoration: none !important;
+     color: var(--primary-color);
+     justify-content: center;
+     align-items: center;
+     margin: 0 .2rem;
+}
+.social-media-cards{
+     margin: .6rem 0 .8rem;
+}
+.social-media-cards a:hover{
+     background: var(--primary-color);
+     color: var(--white-color);
+     transition: .3s;
+}
+.social-media-cards a:not(:hover){
+     background: var(--white-color);
+     color: var(--primary-color);
+     transition: .3s;
+}
+.btn{
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 10rem;
+     height: 3rem;
+     background: var(--primary-color);
+     border: var(--border);
+     border-radius: .3rem;
+     font-size: 1rem;
+     color: var(--white-color);
+     font-weight: 500;
+     margin: 0 1rem;
+     transition: .5s;
+}
+.btn-box{
+     margin-top: 1.3rem;
+}
+.contact-me{
+     background: transparent;
+     color: var(--primary-color);
+}
+.contact-me:hover{
+     background: var(--primary-color);
+     color: var(--white-color);
+     transition: .3s;
+}
+.download-cv:hover{
+     background: transparent;
+     color: var(--primary-color);
+     transition: .3s;
+}
+.page-right{
+     position: absolute;
+     right: 0;
+
+}
+.workeduc-content{
+     margin-top: 2rem;
+}
+.workeduc-content h3{
+     margin-top: .5rem;
+}
+.workeduc-content p{
+     margin-top: .5rem;
+     text-align: justify;
+     color: var(--secondary-text-color);
+}
