@@ -243,8 +243,9 @@ body{
      flex: 1 1 10rem;
      border: var(--border);
      border-radius: .5rem;
-     padding: .8rem 0rem 1.1rem;
+     padding: .8rem 0rem .8rem;
      text-align: center;
+     transition: .3s ease;
 }
 .services-box .services-content:hover{
      box-shadow: var(--box-shadow);
@@ -255,6 +256,7 @@ body{
 }
 .services-content p{
      font-size: 14px;
+     padding-top: 1rem;
 }
 .page-3{
      padding: 0.3rem !important;
@@ -262,189 +264,114 @@ body{
 .services-content .btn{
      width: 8rem;
      height: 2.5rem;
+     margin-top: 1rem;
 }
-/*
-.btn{
+.skills-box{
+     display: flex !important;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+}
+.skills-box .skills-content{
+     flex: 1 1 20rem;
+}
+.skills-content h3{
+     font-size: 1.5rem;
+     line-height: 1;
+     margin-bottom: 0.8rem;
+}
+.skills-content .content{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 0.5rem;
+}
+.skills-content .content span{
      display: inline-flex;
+     flex-direction: column;
      justify-content: center;
      align-items: center;
-     width: 9.5rem;
-     height: 3rem;
-     background: var(--main-color);
+     width: 5rem;
+     height: 3.5rem;
      border: var(--border);
      border-radius: .3rem;
-     font-size: 1rem;
-     color: var(--white-color);
-     font-weight: 500;
-     margin: 0 1rem;
-     transition: .5s;
+     font-weight: 600;
+     transition: .3s ease-in-out;
+}
+.skills-content .content span:hover{
+     box-shadow: var(--box-shadow);
+}
+.skills-content .content span i{
+     font-size: 2rem;
+     color: var(--main-color);
+}
+.project-box .img-box{
+     display: flex;
+     width: 100%;
+     border: var(--border);
+     border-radius: .3rem;
+     overflow: hidden;
+}
+.img-box img{
+     width: 100%;
+     object-fit: cover;
+     transition: .5s ease-in-out;
+}
+.project-box .img-box:hover img{
+     transform: scale(1.1);
 }
 
-
-.profile-page h3{
-     font-size: 1rem;
-     color: var(--primary-color);
-     margin-top: 1rem;
+.project-box .info-box{
+     margin: 1rem 0 1.5rem;
+}
+.info-box .info-title{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
      margin-bottom: 1rem;
 }
-.social-media-cards a{
-     display: inline-flex;
-     width: 2.5rem;
-     height: 2.5rem;
-     background: transparent;
-     border: var(--border);
-     border-radius: 50%;
-     color: var(--primary-color);
-     text-decoration: none !important;
-     justify-content: center;
+.project-box h3{
+     font-size: 1.3rem;
+}
+.info-title a{
+     display: flex;
      align-items: center;
-     margin: 0 .2rem;
+     color: var(--main-color);
 }
-.social-media-cards{
-     margin: 0rem 0 .8rem;
+.info-box a i{
+     margin-left: .3rem;
 }
-.social-media-cards a:hover{
-     background: var(--primary-color);
-     color: var(--white-color);
-     transition: .3s;
+.info-box p:nth-of-type(1){
+     font-weight: 600;
 }
-.social-media-cards a:not(:hover){
-     background: var(--white-color);
-     color: var(--primary-color);
-     transition: .3s;
-}
-
-.contact-me{
-     background: transparent;
-     color: var(--primary-color);
-}
-.contact-me:hover{
-     background: var(--primary-color) !important;
-     color: var(--white-color) !important;
-     transition: .3s;
-}
-.btn:hover{
-     background: transparent;
-     color: var(--primary-color);
-     transition: .3s;
-} */
-/* .page-right{
-     position: absolute;
-     right: 0;
-     transform-style: preserve-3d;
-} */
-/* .book-page.page-right.turn{
-     transform: rotateY(-180deg);
-}
-.page-front,.page-back{
-     position: absolute;
-     right: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: var(--pages-color);
-     padding: 2rem !important;
-}
-.page-front{
-     transform: rotateY(0deg) translateZ(1px);
-}
-.page-back{
-     transform: rotateY(180deg) translateZ(1px);
-}
-.title{
-     text-align: center;
-     margin-bottom: 1rem; */
-     /* display: block; */
-/* }
-
-.turn{
-     transform: rotateY(-180deg);
-}
-.workeduc-box{
-     border-left: var(--border);
-}
-.workeduc-content{
-     position: relative;
-     padding-left: 1.6rem;
-     margin-bottom: 1.2rem;
-}
-.workeduc-content h3{
-     margin-top: .5rem;
-}
-.workeduc-content p{
-     margin-top: .5rem;
-     text-align: justify;
-     color: var(--secondary-text-color);
-}
- 
-
-.year{
-     color: var(--primary-color);
-}
-.year i{
-     margin-right: .4rem;
-}
-.page-number{
-     position: absolute;
-     bottom: 0rem;
-     left: 50%;
-     transform: translateX(-50%);
-}
-.nextprev-btn{
-     position: absolute;
-     width: 2.5rem;
-     height: 2.5rem;
-     background: var(--primary-color);
-     bottom: -.5rem;
-     right: 0rem;
-     border: var(--border);
-     border-radius: 50%;
+.project-box .btn-box{
      display: flex;
      justify-content: center;
-     align-items: center;
-     color: var(--white-color);
-     font-size: 1.2rem;
-     cursor: pointer;
-     box-shadow: var(--box-shadow);
-     transition: .3s;
 }
-.nextprev-btn:hover{
-     background: white;
-     border: 1px solid var(--primary-color);
-     color: var(--primary-color);
+.project-box .btn-box .btn{
+          margin: 0 1.1rem;
 }
-.back{
-     left: 1.5rem;
-}
-.service-content{
-     border: var(--border);
-     border-radius: .5rem;
-     padding: 1rem 0.3rem;
+
+.contact-box{
      text-align: center;
-     transition: .3s ease;
 }
-.service-content:nth-child(2){
-     margin-top: 1rem;
-}
-.service-content p{
-     text-align: justify;
-}
-.service-content i{
-     font-size: 1.3rem;
-     color: var(--primary-color);
-}
-.btn:hover{
+.contact-box .field{
+     width: 100%;
      background: transparent;
-     color: var(--primary-color);
-     transition: .3s;
+     border: var(--border);
+     border-radius: .3rem;
+     padding: .8rem 1rem;
+     font-size: 1rem;
+     color: var(--text-color);
+     margin-bottom: 1rem;
 }
-.service-content:hover{
-     box-shadow: var(--box-shadow);
-     transition: .3s;
+.contact-box .field::placeholder{
+     color: var(--text-color);
 }
-.num-3{
-     bottom: 0 !important;
+.contact-box .btn{
+     cursor: pointer;
 }
-.btn-3{
-     bottom: 0 !important;
-} */
+.back-profile{
+     position: absolute;
+     width: 2rem;
+     height: 2rem;
+     background: transparent;
+}
