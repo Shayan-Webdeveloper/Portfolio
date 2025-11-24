@@ -401,6 +401,7 @@ body{
      background: transparent;
      border: var(--border);
      border-radius: .3rem;
+<<<<<<< HEAD
      font-size: 1rem;
      color: var(--main-color);
      display: inline-flex;
@@ -427,3 +428,9 @@ body{
      transform: translateX(-50%) scale(1);
      top: -1.8rem;
 }
+=======
+     font-size: 1.rem;
+     color: var(--main-color)
+     display: inline-flex;
+}
+>>>>>>> 603cdc5f06ca4102c33a366bd5f58bced2ff4a9a
