@@ -374,4 +374,9 @@ body{
      width: 2rem;
      height: 2rem;
      background: transparent;
+     border: var(--border);
+     border-radius: .3rem;
+     font-size: 1.rem;
+     color: var(--main-color)
+     display: inline-flex;
 }
