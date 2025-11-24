@@ -28,6 +28,7 @@ body{
      min-height: 100vh;
      background-color: var(--bg-color);
      color: var(--text-color);
+     overflow: hidden;
 }
 /* Book */
 .wrapper{
@@ -35,6 +36,20 @@ body{
      width: 56rem;
      height: 35rem;
      padding: 2rem;
+     perspective: 250rem;
+     animation-name: show-animate;
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+     }
+@keyframes show-animate {
+     0%, 30%{
+          opacity: 0;
+          transform: rotate(-20deg);
+     }
+     100%{
+          opacity: 1;
+          transform: rotate(0deg);
+     }
 }
 /* Book Pages */
 .cover{
@@ -57,6 +72,7 @@ body{
 }
 .cover.cover-right{
      z-index: 100;
+     transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .book{
      position: relative;
@@ -80,7 +96,9 @@ body{
      border: .3rem solid var(--main-color);
      margin-bottom: 1rem;
      border-radius: 50%;
-     /* margin-top: 0rem; */
+}
+.book-page.page-left{
+     box-shadow: -.6rem .6rem .6rem rgba(0, 0, 0, .2);
 }
 .profile-page{
      display: flex;
